@@ -19,7 +19,7 @@ jobs:
               with: 
                 node-version: 24.x
 
-            - name: Instalando dependências do node
+            - name: Instalando dependências do projeto
               run: npm install       
               
             - name: Executando testes de unidade
