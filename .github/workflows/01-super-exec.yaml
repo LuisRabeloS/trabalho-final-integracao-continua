@@ -21,12 +21,6 @@ jobs:
 
             - name: Instalando dependências do node
               run: npm install       
-
-            - name: Instalando mocha
-              run: npm i mocha
-
-            - name: Instalando mochawesome
-              run: npm i mochawesome  
               
             - name: Executando testes de unidade
               run: npm test  
