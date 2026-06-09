@@ -1,0 +1,253 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-09T23:23:16.632Z",
+    "end": "2026-06-09T23:23:16.642Z",
+    "duration": 10,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "43f04cda-fdd7-480e-a138-0e12a9e848e8",
+      "title": "",
+      "fullFile": "C:\\PGATS\\INTEGRACAO_CONTINUA\\EXERCICIO FINAL\\trabalho-conclusao-programacao-para-automacao-de-testes\\test\\pagamentos.test.js",
+      "file": "\\test\\pagamentos.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "092c2143-e379-4168-aed3-70b831ebdfce",
+          "title": "Testes da classe de pagamentos",
+          "fullFile": "C:\\PGATS\\INTEGRACAO_CONTINUA\\EXERCICIO FINAL\\trabalho-conclusao-programacao-para-automacao-de-testes\\test\\pagamentos.test.js",
+          "file": "\\test\\pagamentos.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "5ea17b3d-9484-49f3-a445-2f7917389d52",
+              "title": "Testes da funcao realizaPagamentos",
+              "fullFile": "C:\\PGATS\\INTEGRACAO_CONTINUA\\EXERCICIO FINAL\\trabalho-conclusao-programacao-para-automacao-de-testes\\test\\pagamentos.test.js",
+              "file": "\\test\\pagamentos.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve realizar um pagamento com categoria padrão",
+                  "fullTitle": "Testes da classe de pagamentos Testes da funcao realizaPagamentos Deve realizar um pagamento com categoria padrão",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "servicoDePagamentos.realizaPagamentos('12345', 'Nubank', 100.00)\nconst resultado = servicoDePagamentos.consultaPagamentos()\nconst esperado = { codigo: '12345', empresa: 'Nubank', valor: 100.00, categoria: \"padrão\" }\nassert.deepEqual(resultado, esperado)",
+                  "err": {},
+                  "uuid": "3d2a06f1-828b-4889-bf9c-037c1357d90a",
+                  "parentUUID": "5ea17b3d-9484-49f3-a445-2f7917389d52",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Deve realizar um pagamento de categoria cara",
+                  "fullTitle": "Testes da classe de pagamentos Testes da funcao realizaPagamentos Deve realizar um pagamento de categoria cara",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "servicoDePagamentos.realizaPagamentos('67890', 'Itau', 100.01)\nconst resultado = servicoDePagamentos.consultaPagamentos()\nconst esperado = { codigo: '67890', empresa: 'Itau', valor: 100.01, categoria: \"cara\" }\nassert.deepEqual(resultado, esperado)",
+                  "err": {},
+                  "uuid": "0a78de17-d5c5-4aad-a304-fb3303f15d61",
+                  "parentUUID": "5ea17b3d-9484-49f3-a445-2f7917389d52",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar erro ao passar valor 0",
+                  "fullTitle": "Testes da classe de pagamentos Testes da funcao realizaPagamentos Validar erro ao passar valor 0",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.throws(() => {\n    servicoDePagamentos.realizaPagamentos('67890', 'Itau', 0)\n},\n    {\n        message: 'Valor inválido'\n    }\n)",
+                  "err": {},
+                  "uuid": "f950abca-bd83-4404-91f5-419a129ca717",
+                  "parentUUID": "5ea17b3d-9484-49f3-a445-2f7917389d52",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar erro ao passar valor null",
+                  "fullTitle": "Testes da classe de pagamentos Testes da funcao realizaPagamentos Validar erro ao passar valor null",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.throws(() => {\n    servicoDePagamentos.realizaPagamentos('82631', 'Mercado Livre', null)\n}, {\n    message: 'Valor inválido'\n}\n)",
+                  "err": {},
+                  "uuid": "5e7e933e-b041-4792-9013-370d7bb8b9f7",
+                  "parentUUID": "5ea17b3d-9484-49f3-a445-2f7917389d52",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar erro ao passar código null",
+                  "fullTitle": "Testes da classe de pagamentos Testes da funcao realizaPagamentos Validar erro ao passar código null",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.throws(() => {\n    servicoDePagamentos.realizaPagamentos(null, 'Neon', 121)\n},\n    {\n        message: 'Código inválido'\n    }\n)",
+                  "err": {},
+                  "uuid": "a5386dd3-ca93-4564-b0ea-5a4f0e6df24f",
+                  "parentUUID": "5ea17b3d-9484-49f3-a445-2f7917389d52",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Validar erro ao passar empresa null",
+                  "fullTitle": "Testes da classe de pagamentos Testes da funcao realizaPagamentos Validar erro ao passar empresa null",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "assert.throws(() => {\n    servicoDePagamentos.realizaPagamentos('43610', null, 37.90)\n},\n    {\n        message: 'Empresa inválida'\n    }\n)",
+                  "err": {},
+                  "uuid": "923b77c7-c39b-43dc-835c-cda0aa650093",
+                  "parentUUID": "5ea17b3d-9484-49f3-a445-2f7917389d52",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3d2a06f1-828b-4889-bf9c-037c1357d90a",
+                "0a78de17-d5c5-4aad-a304-fb3303f15d61",
+                "f950abca-bd83-4404-91f5-419a129ca717",
+                "5e7e933e-b041-4792-9013-370d7bb8b9f7",
+                "a5386dd3-ca93-4564-b0ea-5a4f0e6df24f",
+                "923b77c7-c39b-43dc-835c-cda0aa650093"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "07272863-02e1-4455-a0ba-71e24ecac1d7",
+              "title": "Testes da funcao consultaPagamentos",
+              "fullFile": "C:\\PGATS\\INTEGRACAO_CONTINUA\\EXERCICIO FINAL\\trabalho-conclusao-programacao-para-automacao-de-testes\\test\\pagamentos.test.js",
+              "file": "\\test\\pagamentos.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve consultar o último pagamento realizado",
+                  "fullTitle": "Testes da classe de pagamentos Testes da funcao consultaPagamentos Deve consultar o último pagamento realizado",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "servicoDePagamentos.realizaPagamentos(\n            '99999',\n            'PicPay',\n            50\n        )\n        const resultado =\n            servicoDePagamentos.consultaPagamentos()\n        const esperado = {\n            codigo: '99999',\n            empresa: 'PicPay',\n            valor: 50,\n            categoria: 'padrão'\n        }\n        assert.deepEqual(resultado, esperado)",
+                  "err": {},
+                  "uuid": "f981511b-ffaf-43c6-b282-be6bbdaebc35",
+                  "parentUUID": "07272863-02e1-4455-a0ba-71e24ecac1d7",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f981511b-ffaf-43c6-b282-be6bbdaebc35"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.6"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
